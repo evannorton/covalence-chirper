@@ -1,16 +1,16 @@
-import { join } from 'path';
-import express from 'express';
-import routes from './routes';
-import stateRouting from './middleware/routing.mw';
+import { join } from "path";
+import express from "express";
+import routes from "./routes";
+import stateRouting from "./middleware/routing.mw";
 
-const CLIENT_PATH = join(__dirname, '../../client');
+const CLIENT_PATH = join(__dirname, "../../client");
 
 let app = express();
 
 app.use(express.static(CLIENT_PATH));
 app.use(express.json());
 
-app.use('/api', routes);
+app.use("/api", routes);
 
 app.use(stateRouting);
 

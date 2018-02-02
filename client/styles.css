@@ -1,0 +1,70 @@
+label {
+    margin-bottom: .5em;
+    margin-top: .5em;
+}
+
+#header {
+    color: white;
+    height: 10em;
+    background-color: black;
+    margin-bottom: 3em;
+    user-select: none;
+}
+
+#chirp-form-card {
+    width: 60%;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+#chirp-name {
+    margin-bottom: .3em;
+}
+
+#chirp-form {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#chirp-button {
+    margin-top: .5em;
+}
+
+.delete-img {
+    width: 40%;
+    float: right;
+    cursor: pointer;
+}
+
+.chirp-text {
+    font-size: 1.1em;
+}
+
+.single-text {
+    font-size: 1.5em;
+}
+
+.delete-text {
+    font-size: 1.5em;
+    color: red;
+}
+
+.details-text {
+    font-size: 1.1em;
+    color: darkgray;
+}
+
+.container {
+    padding: 0;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+.chirp {
+    width: 60%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding: 0;
+}
