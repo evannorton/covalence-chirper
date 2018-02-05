@@ -30,9 +30,9 @@ label {
     margin-top: .5em;
 }
 
-.delete-img {
-    width: 40%;
-    float: right;
+.icon-img {
+    margin-left: 1em;
+    width: 2em;
     cursor: pointer;
 }
 
