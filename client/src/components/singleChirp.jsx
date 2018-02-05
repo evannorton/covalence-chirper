@@ -27,10 +27,18 @@ class SingleChirp extends Component {
             });
     }
 
+    handleNameChange(event) {
+        this.setState({ newName: event.target.value });
+    }
+
+    handleTextChange(event) {
+        this.setState({ newText: event.target.value });
+    }
+
     editChirp() {
-        $("#newName").prop("defaultValue", this.state.name);
-        $("#newText").prop("defaultValue", this.state.text);
         $('#myModal').modal();
+        this.setState({ newName: this.state.name })
+        this.setState({ newText: this.state.text })
     }
 
     updateChirp(name, text) {
@@ -75,10 +83,10 @@ class SingleChirp extends Component {
                                 </Link>
                             </div>
                             <div className="modal-body">
-                                <textarea name="newName" id="newName" cols="60" rows="1"></textarea>
+                                <input type="text" value={this.state.newName} onChange={(value) => { this.handleNameChange(value) }} name="newName" id="newName" cols="60" rows="1" />
                             </div>
                             <div className="modal-body">
-                                <textarea name="newText" id="newText" cols="60" rows="10"></textarea>
+                                <textarea value={this.state.newText} onChange={(value) => { this.handleTextChange(value) }} name="newText" id="newText" cols="60" rows="10"></textarea>
                             </div>
                             <div className="modal-footer">
                                 <Link
