@@ -64,7 +64,7 @@ Happy Hacking!
 * Remember to use express.static middleware!
 * **HINT:** jQuery functions for calling APIs: $.ajax, $.get, $.post
 
-# Chirper (Full Stack)
+# Chirper (Full Stack Part 1)
 
 In this lab, you will combine two concepts:
 
@@ -99,3 +99,45 @@ On the page for editing a single chirp, you should have a form that is prefilled
   * **this.props.history.push('/something')** allows you to navigate to the page that responds to the path /something
   * **this.props.history.replace('/something')** can be used to navigate to that path, but not keep a record of where we currently are (we are replacing the current browser history entry, with this new page we are going to. This is useful if we don't want someone to be able to click the back button and return to this page)
   * **this.props.history.goBack()** can be used to navigate back one page in the browser history
+
+# Chirper (Database)
+
+## Required
+
+* Using Workbench, create a database called chirpr.
+* Using queries, create the following tables:
+  * Users
+    * id - int not null auto_increment primary key
+    * name - varchar(x) not null
+    * email - varchar(x) not null
+    * password - text null
+    * _created - datetime default current_timestamp
+  * Chirps
+    * id
+    * userid
+    * text
+    * location
+    * _created
+* Add a foreign key to the userid field of Chirps
+* Insert 10 Users into your database
+* Insert 100 Chirps into your database
+* Practice queries:
+  * Select all chirps
+    * Use * to get all fields
+    * Try selecting only certain fields
+  * Select all users
+  * Select all chirps from a certain user using a join on the foreign key
+
+## Advanced
+
+* Create a Mentions table with the following fields
+  * userid
+  * chirpid
+* Create a primary key that spans both columns in the table
+  * Hint: this table is a cross-reference table or many-to-many table so there is no need for an id column. (Don't worry, we'll go over * these in the next lecture!)
+* Create 2 foreign keys
+  * Create one for userid that connects the userid in Mentions to the Users table
+  * Create on for chirpid that connects the chirpid in Mentions to the Chirps table
+* Insert rows into the Mentions table that connect chirps to users
+* Practice queries:
+  * Select all chirps that mention certain users
