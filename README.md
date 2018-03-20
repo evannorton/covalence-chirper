@@ -36,8 +36,9 @@ Happy Hacking!
 * Setup an API with the project structure like:
 ** /client
 ** /server
-*** /routes/index.js
+*** /routes/
 *** /routes/chirps.js
+...*index.js
 *** server.js
 *** chirpsstore.js (file provided in this lab)
 * In routes/chirps.js, create GET, POST, PUT, DELETE methods on a router that is created in chirps.js
@@ -61,4 +62,4 @@ Happy Hacking!
 *** Add an x next to chirps that will delete them when clicked
 *** When a chirp is clicked, popup a modal that lets you edit the chirp
 * Remember to use express.static middleware!
-* ''HINT:'' jQuery functions for calling APIs: $.ajax, $.get, $.post
+* **HINT:** jQuery functions for calling APIs: $.ajax, $.get, $.post
