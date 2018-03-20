@@ -92,10 +92,10 @@ On the page for editing a single chirp, you should have a form that is prefilled
   * see MDN, specifically "Uploading JSON Data" in the "Making Fetch Requests" section
 * You will find front-end route params and this.props.match.params to be useful in this lab
 * Recommended front-end paths are as follows:
-  * / for the main page that displays the list of chirps and a form
-  * /chirp/:id/edit for the page that displays a chirp edit form
-  * /chirp/:id for the page that displays a single chirp
+  * **/** for the main page that displays the list of chirps and a form
+  * **/chirp/:id/edit** for the page that displays a chirp edit form
+  * **/chirp/:id** for the page that displays a single chirp
 * Any component that is presented by the Router (e.g. your "pages") will have access to this.props.history. This is necessary to kick off navigation from your code. (in response to something being completed, etc.)
-  * this.props.history.push('/something') allows you to navigate to the page that responds to the path /something
-  * this.props.history.replace('/something') can be used to navigate to that path, but not keep a record of where we currently are (we are replacing the current browser history entry, with this new page we are going to. This is useful if we don't want someone to be able to click the back button and return to this page)
-  * this.props.history.goBack() can be used to navigate back one page in the browser history
+  * **this.props.history.push('/something')** allows you to navigate to the page that responds to the path /something
+  * **this.props.history.replace('/something')** can be used to navigate to that path, but not keep a record of where we currently are (we are replacing the current browser history entry, with this new page we are going to. This is useful if we don't want someone to be able to click the back button and return to this page)
+  * **this.props.history.goBack()** can be used to navigate back one page in the browser history
